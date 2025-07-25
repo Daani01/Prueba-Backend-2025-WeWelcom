@@ -1,0 +1,18 @@
+security:
+    password_hashers:
+        Symfony\Component\Security\Core\User\UserInterface: 'auto'
+    
+    providers:
+        api_key_user_provider:
+            id: App\Security\UserProvider
+
+    firewalls:
+        api:
+            pattern: ^/api
+            stateless: true
+            custom_authenticators:
+                - App\Security\ApiKeyAuthenticator
+            entry_point: App\Security\ApiEntryPoint
+
+    access_control:
+        - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }

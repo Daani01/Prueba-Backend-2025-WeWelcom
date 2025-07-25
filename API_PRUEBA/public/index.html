@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Restaurantes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h1>CRUD Restaurantes</h1>
+
+    <form id="auth-form">
+      <input type="text" id="api-key-input" placeholder="API Key" required>
+      <button type="submit">Conectar</button>
+    </form>
+
+    <hr>
+
+    <form id="restaurante-form">
+      <input type="hidden" id="restaurante-id">
+      <input type="text" id="nombre" placeholder="Nombre" required>
+      <input type="text" id="direccion" placeholder="Dirección" required>
+      <input type="text" id="telefono" placeholder="Teléfono" required>
+      <button type="submit">Guardar</button>
+    </form>
+
+    <ul id="restaurantes-list"></ul>
+  </main>
+
+  <script type="module" src="js/controller.js"></script>
+</body>
+</html>
