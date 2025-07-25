@@ -63,7 +63,6 @@ async function handleDelete(id) {
 
 document.getElementById('restaurante-form').addEventListener('submit', handleFormSubmit);
 
-// Si ya hay una API key guardada, la aplicamos
 if (apiKey) {
   document.getElementById('api-key-input').value = apiKey;
   model.setApiKey(apiKey);
